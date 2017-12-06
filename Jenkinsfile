@@ -5,26 +5,12 @@ properties([
     projectUrlStr: 'https://github.com/My-NewOrganization/Massachusetts/'],
     pipelineTriggers([githubPush()])])
 
-pipeline {
-    agent any 
+node {
+  stage 'build'
+  echo 'hello world'
+  stage 'test'
+  echo 'hello veridic'
+  stage 'Deploy'
+  echo 'hello Georgia'
+ }
 
-    stages {
-        stage('Build') { 
-            steps { 
-                sh 'pwd' 
-            }
-        }
-        stage('Test'){
-            steps {
-                sh 'java -version'
-                
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'ls'
-                sh 'pwd'
-            }
-        }
-    }
-}
