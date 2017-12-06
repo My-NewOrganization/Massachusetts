@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 properties([
     [$class: 'GithubProjectProperty',
-    displayName: '',
+    displayName: 'shivakumar',
     projectUrlStr: 'https://github.com/My-NewOrganization/Massachusetts/'],
     pipelineTriggers([githubPush()])])
 
